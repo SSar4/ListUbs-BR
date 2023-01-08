@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["mongodb"]
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Ubs {
+    id         String @id @default(auto()) @map("_id") @db.ObjectId
+    CNES       String
+    UF         String
+    IBGE       String
+    NOME       String
+    LOGRADOURO String
+    BAIRRO     String
+    LATITUDE   String
+    LONGITUDE  String
+
+    @@map("ubs")
+}

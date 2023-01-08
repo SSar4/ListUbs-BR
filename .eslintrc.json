@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["standard", "eslint:recommended"],
+  "parser": "@babel/eslint-parser",
+  "overrides": [],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+
+  "rules": {
+    "semi": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
+  }
+}
